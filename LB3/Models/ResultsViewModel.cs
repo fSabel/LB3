@@ -12,7 +12,7 @@ namespace LB3.Models
             SolverXlam();
         }
 
-        public void SolverXlam()
+        public bool SolverXlam()
         {
             Solver solver = Solver.CreateSolver("GLOP");
 
@@ -71,6 +71,45 @@ namespace LB3.Models
             X4 = Math.Round(x4.SolutionValue(), 0);
             X5 = Math.Round(x5.SolutionValue(), 0);
             X6 = Math.Round(x6.SolutionValue(), 0);
+
+            if (resultStatus == Solver.ResultStatus.OPTIMAL)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public double Ogr1
+        {
+            get => dataViewModel.Isx_R * dataViewModel.A1_ChZagO;
+        }
+
+        public double Ogr2
+        {
+            get => dataViewModel.Isx_R * dataViewModel.A2_ChZagO;
+        }
+
+        public double Ogr3
+        {
+            get => dataViewModel.Isx_R * dataViewModel.A3_ChZagO;
+        }
+
+        public double Ogr4
+        {
+            get => dataViewModel.Isx_R * dataViewModel.A4_ChZagO;
+        }
+
+        public double Ogr5
+        {
+            get => dataViewModel.Isx_R * dataViewModel.A5_ChZagO;
+        }
+
+        public double Ogr6
+        {
+            get => dataViewModel.Isx_R * dataViewModel.A6_ChZagO;
         }
 
         public double Cel { get; set; }

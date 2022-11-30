@@ -1,0 +1,211 @@
+﻿@{
+    ViewData["Title"] = "Результаты расчёта раскроя";
+}
+@model ResultsViewModel
+
+<form method="get" asp-action="Report" asp-controller="Home">
+    <div class="container">
+        <div class="text-center">
+            <h2>Решение задачи минимизации отходов от раскроя рулонных заготовок</h2><br>
+            <h3>Расчетные показатели</h3>
+        </div>
+        <div class="row">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Наименование показателя, ед. изм.</th>
+                            <th>Величина</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Целевая функция</td>
+                            <td><input type="text" class="table-input-text border-0" asp-for="Cel" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Ограничение 1</td>
+                            <td><input type="text" class="table-input-text border-0" asp-for="Ogr1" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Ограничение 2</td>
+                            <td><input type="text" class="table-input-text border-0" asp-for="Ogr2" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Ограничение 3</td>
+                            <td><input type="text" class="table-input-text border-0" asp-for="Ogr3" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Ограничение 4</td>
+                            <td><input type="text" class="table-input-text border-0" asp-for="Ogr4" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Ограничение 5</td>
+                            <td><input type="text" class="table-input-text border-0" asp-for="Ogr5" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Ограничение 6</td>
+                            <td><input type="text" class="table-input-text border-0" asp-for="Ogr6" readonly></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>X1</th>
+                            <th>X2</th>
+                            <th>X3</th>
+                            <th>X4</th>
+                            <th>X5</th>
+                            <th>X6</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> <input type="text" class="table-input-text border-0" asp-for="X1" id="X1" readonly></td>
+                            <td> <input type="text" class="table-input-text border-0" asp-for="X2" id="X2" readonly></td>
+                            <td> <input type="text" class="table-input-text border-0" asp-for="X3" id="X3" readonly></td>
+                            <td> <input type="text" class="table-input-text border-0" asp-for="X4" id="X4" readonly></td>
+                            <td> <input type="text" class="table-input-text border-0" asp-for="X5" id="X5" readonly></td>
+                            <td> <input type="text" class="table-input-text border-0" asp-for="X6" id="X6" readonly></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Отходы 1</th>
+                            <th>Отходы 2</th>
+                            <th>Отходы 3</th>
+                            <th>Отходы 4</th>
+                            <th>Отходы 5</th>
+                            <th>Отходы 6</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="table-input-text border-0" asp-for="Otxod1" readonly></td>
+                            <td><input type="text" class="table-input-text border-0" asp-for="Otxod2" readonly></td>
+                            <td><input type="text" class="table-input-text border-0" asp-for="Otxod3" readonly></td>
+                            <td><input type="text" class="table-input-text border-0" asp-for="Otxod4" readonly></td>
+                            <td><input type="text" class="table-input-text border-0" asp-for="Otxod5" readonly></td>
+                            <td><input type="text" class="table-input-text border-0" asp-for="Otxod6" readonly></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-7">
+                <div style="width: 600px; height:600px">
+                    <canvas id="myChart"></canvas>
+                    <script>
+                        const ctx = document.getElementById('myChart').getContext('2d');
+                        const myChart = new Chart(ctx, {
+                            type: 'doughnut',
+                            data: {
+                                labels: ['1 вид', '2 вид', '3 вид', '4 вид', '5 вид', '6 вид'],
+                                datasets: [{
+                                    label: 'Распределение заготовок по способам раскроя, шт ',
+                                    data: [@Model.X1, @Model.X2, @Model.X3, @Model.X4, @Model.X5, @Model.X6],
+
+                                    backgroundColor: [
+                                        'rgba(156, 245, 196, 0.8)',
+                                        'rgba(166, 255, 241, 0.8)',
+                                        'rgba(166, 232, 255, 0.8)',
+                                        'rgba(157, 171, 255, 0.8)',
+                                        'rgba(195, 157, 255, 0.8)',
+                                    ],
+                                    borderColor: [
+                                        'rgba(0, 202, 90, 0.8)',
+                                        'rgba(0, 202, 170, 0.8)',
+                                        'rgba(0, 147, 198, 0.8)',
+                                        'rgba(0, 27, 198, 0.8)',
+                                        'rgba(65, 0, 169, 0.8)',
+                                    ],
+                                    borderWidth: 1
+                                }]
+                            },
+                            options: {
+                                plugins: {
+                                    title: {
+                                        display: true,
+                                        text: 'Распределение заготовок по способам раскроя, шт'
+                                    }
+                                }
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-5"></div>
+        <div class="col-3">
+            <input class="btn btn-info w-100" type="submit" value="Скачать отчет" />
+        </div>
+        <div class="col-4"></div>
+    </div>
+    <input type="text" asp-for="dataViewModel.A1_ChZag" hidden>
+    <input type="text" asp-for="dataViewModel.A1_ChZag1" hidden>
+    <input type="text" asp-for="dataViewModel.A1_ChZag2" hidden>
+    <input type="text" asp-for="dataViewModel.A1_ChZag3" hidden>
+    <input type="text" asp-for="dataViewModel.A1_ChZag4" hidden>
+    <input type="text" asp-for="dataViewModel.A1_ChZag5" hidden>
+    <input type="text" asp-for="dataViewModel.A1_ChZag6" hidden>
+    <input type="text" asp-for="dataViewModel.A1_ChZagO" hidden>
+
+    <input type="text" asp-for="dataViewModel.A2_ChZag" hidden>
+    <input type="text" asp-for="dataViewModel.A2_ChZag1" hidden>
+    <input type="text" asp-for="dataViewModel.A2_ChZag2" hidden>
+    <input type="text" asp-for="dataViewModel.A2_ChZag3" hidden>
+    <input type="text" asp-for="dataViewModel.A2_ChZag4" hidden>
+    <input type="text" asp-for="dataViewModel.A2_ChZag5" hidden>
+    <input type="text" asp-for="dataViewModel.A2_ChZag6" hidden>
+    <input type="text" asp-for="dataViewModel.A2_ChZagO" hidden>
+
+    <input type="text" asp-for="dataViewModel.A3_ChZag" hidden>
+    <input type="text" asp-for="dataViewModel.A3_ChZag1" hidden>
+    <input type="text" asp-for="dataViewModel.A3_ChZag2" hidden>
+    <input type="text" asp-for="dataViewModel.A3_ChZag3" hidden>
+    <input type="text" asp-for="dataViewModel.A3_ChZag4" hidden>
+    <input type="text" asp-for="dataViewModel.A3_ChZag5" hidden>
+    <input type="text" asp-for="dataViewModel.A3_ChZag6" hidden>
+    <input type="text" asp-for="dataViewModel.A3_ChZagO" hidden>
+
+    <input type="text" asp-for="dataViewModel.A4_ChZag" hidden>
+    <input type="text" asp-for="dataViewModel.A4_ChZag1" hidden>
+    <input type="text" asp-for="dataViewModel.A4_ChZag2" hidden>
+    <input type="text" asp-for="dataViewModel.A4_ChZag3" hidden>
+    <input type="text" asp-for="dataViewModel.A4_ChZag4" hidden>
+    <input type="text" asp-for="dataViewModel.A4_ChZag5" hidden>
+    <input type="text" asp-for="dataViewModel.A4_ChZag6" hidden>
+    <input type="text" asp-for="dataViewModel.A4_ChZagO" hidden>
+
+    <input type="text" asp-for="dataViewModel.A5_ChZag" hidden>
+    <input type="text" asp-for="dataViewModel.A5_ChZag1" hidden>
+    <input type="text" asp-for="dataViewModel.A5_ChZag2" hidden>
+    <input type="text" asp-for="dataViewModel.A5_ChZag3" hidden>
+    <input type="text" asp-for="dataViewModel.A5_ChZag4" hidden>
+    <input type="text" asp-for="dataViewModel.A5_ChZag5" hidden>
+    <input type="text" asp-for="dataViewModel.A5_ChZag6" hidden>
+    <input type="text" asp-for="dataViewModel.A5_ChZagO" hidden>
+
+    <input type="text" asp-for="dataViewModel.A6_ChZag" hidden>
+    <input type="text" asp-for="dataViewModel.A6_ChZag1" hidden>
+    <input type="text" asp-for="dataViewModel.A6_ChZag2" hidden>
+    <input type="text" asp-for="dataViewModel.A6_ChZag3" hidden>
+    <input type="text" asp-for="dataViewModel.A6_ChZag4" hidden>
+    <input type="text" asp-for="dataViewModel.A6_ChZag5" hidden>
+    <input type="text" asp-for="dataViewModel.A6_ChZag6" hidden>
+    <input type="text" asp-for="dataViewModel.A6_ChZagO" hidden>
+
+    <input type="text" asp-for="dataViewModel.Isx_F" hidden />
+    <input type="text" asp-for="dataViewModel.Isx_R" hidden />
+</form>
