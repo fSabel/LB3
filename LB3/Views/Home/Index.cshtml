@@ -1,8 +1,207 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Исходные данные";
 }
+@model DataViewModel
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+<div class="text-left">
+    <h1 class="display-4">Исходные данные для расчёта</h1>
+    
+    <form asp-action="Result" asp-controller="Home" method="get">
+        <table class="table table-bordered">
+            <tr>
+                <th scope="col" rowspan="2">Вид заготовки</th>
+                <th scope="col" rowspan="2">Площадь поверхности заготовки, см2</th>
+                <th scope="col" colspan="5">Количество заготовок на 1 изделие по соответствующему способу раскроя, шт.</th>
+                <th scope="col" rowspan="2">Количество заготовок на 1 изделие, шт.</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+            </tr>
+            <tr>
+                <th>A1</th>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A1_ChZag">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A1_ChZag1">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A1_ChZag2">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A1_ChZag3">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A1_ChZag4">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A1_ChZag5">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A1_ChZag6">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A1_ChZagO">
+                </td>
+            </tr>
+            <tr>
+                <th>A2</th>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A2_ChZag">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A2_ChZag1">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A2_ChZag2">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A2_ChZag3">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A2_ChZag4">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A2_ChZag5">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A2_ChZag6">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A2_ChZagO">
+                </td>
+            </tr>
+            <tr>
+                <th>A3</th>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A3_ChZag">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A3_ChZag1">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A3_ChZag2">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A3_ChZag3">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A3_ChZag4">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A3_ChZag5">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A3_ChZag6">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A3_ChZagO">
+                </td>
+            </tr>
+            <tr>
+                <th>A4</th>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A4_ChZag">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A4_ChZag1">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A4_ChZag2">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A4_ChZag3">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A4_ChZag4">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A4_ChZag5">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A4_ChZag6">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A4_ChZagO">
+                </td>
+            </tr>
+            <tr>
+                <th>A5</th>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A5_ChZag">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A5_ChZag1">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A5_ChZag2">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A5_ChZag3">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A5_ChZag4">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A5_ChZag5">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A5_ChZag6">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A5_ChZagO">
+                </td>
+            </tr>
+            <tr>
+                <th>A6</th>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A6_ChZag">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A6_ChZag1">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A6_ChZag2">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A6_ChZag3">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A6_ChZag4">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A6_ChZag5">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A6_ChZag6">
+                </td>
+                <td>
+                    <input required type="number" min="0" class="table-input-text" asp-for="A6_ChZagO">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="9">
+                    <table class="table table-bordered mb-0">
+                        <th>Заданная длина полос проката F, см:</th>
+                        <td>
+                            <input required type="number" min="0" class="table-input-text" asp-for="Isx_F">
+                        </td>
+                        <th>Необходимое количество изделий R, шт:</th>
+                        <td>
+                            <input required type="number" min="0" class="table-input-text" asp-for="Isx_R">
+                        </td>
+                    </table>
+                </td>
+
+            </tr>
+        </table>
+
+        <input class="btn btn-primary" type="submit" value="Рассчитать" />
+    </form>
 </div>
