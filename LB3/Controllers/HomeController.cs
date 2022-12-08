@@ -77,20 +77,20 @@ namespace LB3.Controllers
 
             return View(dataViewModel);  
         }
-        //[HttpGet]
-        //public IActionResult Result(DataViewModel dataViewModel)
-        //{
-        //    var resultViewModel = new ResultsViewModel(dataViewModel);
+        [HttpGet]
+        public IActionResult Results(DataViewModel dataViewModel)
+        {
+            var resultViewModel = new ResultsViewModel(dataViewModel);
 
-        //    //if (resultViewModel.SolverFunc() == true)
-        //    //{
-        //    //    return View(resultViewModel);
-        //    //}
-        //    //else
-        //    //{
-        //    //    return RedirectToAction(nameof(FSolver));
-        //    //}
-        //}
+            if (resultViewModel.SolverXlam() == true)
+            {
+                return View(resultViewModel);
+            }
+            else
+            {
+                return RedirectToAction(nameof(FSolver));
+            }
+        }
         [HttpGet]
         public IActionResult Report(DataViewModel dataViewModel)
         {

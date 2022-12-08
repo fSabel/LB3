@@ -10,8 +10,299 @@
             <h3>Расчетные показатели</h3>
         </div>
 
+        <div class="row">
+            <table class="table table-bordered" width="1200px">
+                <thead>
+                    <tr>
+                        <th style="text-align: center;" colspan="9">Количество заготовок на 1 изделие по соответствующему способу раскроя, шт</th>
+                    </tr>
+                    <tr>
+                        <th style="text-align: center;">Вид заготовки</th>
+                        <th style="text-align: center;">Площадь, см2</th>
+                        <th style="text-align: center;">1</th>
+                        <th style="text-align: center;">2</th>
+                        <th style="text-align: center;">3</th>
+                        <th style="text-align: center;">4</th>
+                        <th style="text-align: center;">5</th>
+                        <th style="text-align: center;">6</th>
 
+                        <th style="text-align: center;">Количество заготовок на 1 изделие, шт</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center;">А1</td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text border-0" asp-for="dataViewModel.A1_ChZag"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A1_ChZag1"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A1_ChZag2"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A1_ChZag3"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A1_ChZag4"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A1_ChZag5"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A1_ChZag6"></td>
 
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text border-0" asp-for="dataViewModel.A1_ChZagO"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">А2</td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text border-0" asp-for="dataViewModel.A2_ChZag"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A2_ChZag1"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A2_ChZag2"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A2_ChZag3"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A2_ChZag4"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A2_ChZag5"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A2_ChZag6"></td>
+
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text border-0" asp-for="dataViewModel.A2_ChZagO"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">А3</td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text border-0" asp-for="dataViewModel.A3_ChZag"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A3_ChZag1"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A3_ChZag2"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A3_ChZag3"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A3_ChZag4"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A3_ChZag5"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A3_ChZag6"></td>
+
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text border-0" asp-for="dataViewModel.A3_ChZagO"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">А4</td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text border-0" asp-for="dataViewModel.A4_ChZag"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A4_ChZag1"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A4_ChZag2"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A4_ChZag3"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A4_ChZag4"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A4_ChZag5"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A4_ChZag6"></td>
+
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text border-0" asp-for="dataViewModel.A4_ChZagO"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">А5</td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text border-0" asp-for="dataViewModel.A5_ChZag"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A5_ChZag1"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A5_ChZag2"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A5_ChZag3"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A5_ChZag4"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A5_ChZag5"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A5_ChZag6"></td>
+
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text border-0" asp-for="dataViewModel.A5_ChZagO"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">А6</td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text border-0" asp-for="dataViewModel.A6_ChZag"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A6_ChZag1"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A6_ChZag2"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A6_ChZag3"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A6_ChZag4"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A6_ChZag5"></td>
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text col-12 border-0" asp-for="dataViewModel.A6_ChZag6"></td>
+
+                        <td style="text-align: center;"><input type="number" min="0" style="text-align: center;" class="table-input-text border-0" asp-for="dataViewModel.A6_ChZagO"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Параметр</th>
+                        <th>Значение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Заданная длина полос проката см2.</td>
+                        <td><input type="text" style="text-align: center;" class="table-input-text border-0" asp-for="dataViewModel.Isx_F" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>Всего необходимо изготовить шт. изделий.</td>
+                        <td><input type="text" style="text-align: center;" class="table-input-text border-0" asp-for="dataViewModel.Isx_R" readonly></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="text-center">
+            <h3>Расчетные показатели</h3>
+        </div>
+
+        <div class="row">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Наименование показателя, ед. изм.</th>
+                            <th>Величина</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Величина целевой функции</td>
+                            <td><input type="text" class="table-input-text border-0" asp-for="Cel" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Ограничение 1</td>
+                            <td><input type="text" class="table-input-text border-0" asp-for="Ogr1" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Ограничение 2</td>
+                            <td><input type="text" class="table-input-text border-0" asp-for="Ogr2" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Ограничение 3</td>
+                            <td><input type="text" class="table-input-text border-0" asp-for="Ogr3" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Ограничение 4</td>
+                            <td><input type="text" class="table-input-text border-0" asp-for="Ogr4" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Ограничение 5</td>
+                            <td><input type="text" class="table-input-text border-0" asp-for="Ogr5" readonly></td>
+                        </tr>
+                        <tr>
+                            <td>Ограничение 6</td>
+                            <td><input type="text" class="table-input-text border-0" asp-for="Ogr6" readonly></td>
+                        </tr>
+                    </tbody>
+                </table>
+             
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>X1</th>
+                            <th>X2</th>
+                            <th>X3</th>
+                            <th>X4</th>
+                            <th>X5</th>
+                            <th>X6</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> <input type="text" class="table-input-text col-7 border-0" asp-for="X1" id="X1" readonly></td>
+                            <td> <input type="text" class="table-input-text col-7 border-0" asp-for="X2" id="X2" readonly></td>
+                            <td> <input type="text" class="table-input-text col-7 border-0" asp-for="X3" id="X3" readonly></td>
+                            <td> <input type="text" class="table-input-text col-7 border-0" asp-for="X4" id="X4" readonly></td>
+                            <td> <input type="text" class="table-input-text col-7 border-0" asp-for="X5" id="X5" readonly></td>
+                            <td> <input type="text" class="table-input-text col-7 border-0" asp-for="X5" id="X6" readonly></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Отходы 1</th>
+                            <th>Отходы 2</th>
+                            <th>Отходы 3</th>
+                            <th>Отходы 4</th>
+                            <th>Отходы 5</th>
+                            <th>Отходы 6</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="table-input-text col-7 border-0" asp-for="Otxod1" readonly></td>
+                            <td><input type="text" class="table-input-text col-7 border-0" asp-for="Otxod2" readonly></td>
+                            <td><input type="text" class="table-input-text col-7 border-0" asp-for="Otxod3" readonly></td>
+                            <td><input type="text" class="table-input-text col-7 border-0" asp-for="Otxod4" readonly></td>
+                            <td><input type="text" class="table-input-text col-7 border-0" asp-for="Otxod5" readonly></td>
+                            <td><input type="text" class="table-input-text col-7 border-0" asp-for="Otxod6" readonly></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+            <div class="col-3"></div>
+            <div class="col-7">
+                <div style="width: 600px; height:600px">
+                    <canvas id="myChart"></canvas>
+                    <script>
+                        const ctx = document.getElementById('myChart').getContext('2d');
+                        const myChart = new Chart(ctx, {
+                            type: 'doughnut',
+                            data: {
+                                labels: ['1 вид', '2 вид', '3 вид', '4 вид', '5 вид', '6 вид'],
+                                datasets: [{
+                                    label: 'Распределение заготовок по способам раскроя, шт ',
+                                    data: [@Model.X1, @Model.X2, @Model.X3, @Model.X4, @Model.X5, @Model.X6],
+
+                                    backgroundColor: [
+                                        'rgba(156, 245, 196, 0.8)',
+                                        'rgba(166, 255, 241, 0.8)',
+                                        'rgba(166, 232, 255, 0.8)',
+                                        'rgba(157, 171, 255, 0.8)',
+                                        'rgba(195, 157, 255, 0.8)',
+                                            'rgba(97, 5, 5, 0.6',
+                                    ],
+                                    borderColor: [
+                                        'rgba(0, 202, 90, 0.8)',
+                                        'rgba(0, 202, 170, 0.8)',
+                                        'rgba(0, 147, 198, 0.8)',
+                                        'rgba(0, 27, 198, 0.8)',
+                                        'rgba(65, 0, 169, 0.8)',
+                                            'rgba(97, 5, 5, 0.6',
+                                    ],
+                                    borderWidth: 1
+                                }]
+                            },
+                            options: {
+                                plugins: {
+                                    title: {
+                                        display: true,
+                                        text: 'Распределение заготовок по способам раскроя, шт'
+                                    }
+                                }
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
     </div>
+    <div class="row my-3">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <a class="btn btn-primary w-100" onclick="this.style.display='none'; window.print(); setTimeout(this, 2000, style.display='block')">Сохранить</a>
+        </div>
+        <div class="col-4"></div>
+    </div>
+     <div class="row my-5">
+            <div class="col-4 my-4">
+                   <div>Дата формирования документа</div>
+            </div>
+            <div class="col-4"></div>
+            <div class="col-4 my-4">
+                <div id="current_date_time_block"></div>
+                <script type="text/javascript">
+                    /* функция добавления ведущих нулей */
+                    /* (если число меньше десяти, перед числом добавляем ноль) */
+                    function zero_first_format(value) {
+                        if (value < 10) {
+                            value = '0' + value;
+                        }
+                        return value;
+                    }
+                    /* функция получения текущей даты и времени */
+                    function date_time() {
+                        var current_datetime = new Date();
+                        var day = zero_first_format(current_datetime.getDate());
+                        var month = zero_first_format(current_datetime.getMonth() + 1);
+                        var year = current_datetime.getFullYear();
+                        var hours = zero_first_format(current_datetime.getHours());
+                        var minutes = zero_first_format(current_datetime.getMinutes());
+                        var seconds = zero_first_format(current_datetime.getSeconds());
 
+                        return day + "." + month + "." + year + " " + hours + ":" + minutes + ":" + seconds;
+                    }
+                    /* выводим текущую дату и время на сайт в блок с id "current_date_time_block" */
+                    document.getElementById('current_date_time_block').innerHTML = date_time();
+                </script>
+            </div>
+        </div>
+    </div>
 </form>
